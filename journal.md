@@ -25,7 +25,7 @@ Same mounting holes, mostly the same circuitry, just bigger mosfets and a type C
 - all thermistor input to have overvoltage protection, i dont want to accidentally kill anything with static as i dont know where users will be sticking them
 - 12 fan ports with 1-2.5A 
   - all of these fan ports should have a selector to pick between 5v, 12v or 24v/Vbus
-- 4 fan parts with ~5A of max power
+- 4 fan parts with ~5A of max current
 - USB c in with ESD protection/isolation
 
 I should probably also make a checklist of what i need to get done
