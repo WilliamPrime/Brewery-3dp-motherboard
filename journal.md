@@ -76,12 +76,71 @@ So currently it looks like
 - [ ] sort out OCP for the fans
 - [ ] sort out how im doing to do selectable voltage for the fans
 - [ ] pick mosfets for the fans
+- [ ] start on the schematic
 - [ ] bom optimisation
 Onto the next part! I suspect this might be a tad tricky and involve me learning a chunk of new things
 
+spent some time learning about op amps as i kept spotting them in some thermistor circuits.
+
+# Day 2 08/06/2026 x hours
+
+start1 - 11:23 
+stop 1 - 12:18
+
+start2 - 12:38
+stop2 - 14:21
+
+start3- 16:00
+stop3 - 17:37
+
+first task of toady
+
 ## sort out OVP for the thermistors
 
+
+
 First solution ive found is maybe using a TSV diode to protect them, however Im not sure how well that would do, and leakage current could be a BIG issue
+
+Ive spotted is that some other designs use OP amps to buffer their inputs , if an op amp can help reduce reading errors, im all for it.
+
+the OPA320, OPA323 and OPA2320 
+<img width="1353" height="561" alt="image" src="https://github.com/user-attachments/assets/8d54323b-b71f-43d8-ace2-8b5b1ece8639" />
+
+If the OPA2320 , is a dual channel version of the OPA320, why is the OPA2320 arround 25% cheaper than the OPA320? Is there something im missing? Im aware of pricing this whole time because if i need to add 20channels worth of something price is going to be important.
+
+Im also just going through all of the ADC temperature sensors klipper supports incase one of them is a value gem compared to an STM32.
+No gems, everything was quite pricey.
+
+Anyway back to hunting for op apms and knowledge of how to implament them with OVP
+
+Another op amp im looking at is the MCP6004 and that series
+
+## starting on the schematic
+
+I wanted a break from the op amp stuff, time to do something im a bit more comfortable with, schematics!
+
+<img width="1142" height="570" alt="image" src="https://github.com/user-attachments/assets/1e34d046-45ca-43d7-99f2-8fb85c5d7fe8" />
+
+now im curious if i could do the thermistor op am circuits as a heirarchical sheet to make it a bit less messy, anyway
+
+It also looks like the LQFP144 package i picked can pull a good ammount of power
+
+<img width="973" height="1004" alt="image" src="https://github.com/user-attachments/assets/2cebbfa7-2471-41ac-abc7-e747bb0913ad" />
+
+<img width="1180" height="263" alt="image" src="https://github.com/user-attachments/assets/b1c3d710-eee8-434d-b8cc-30cf64e62964" />
+
+I will probably use a pair of ideal diodes circuits to the OR the usb 5V and 12-24V input for heaters for the drop down for the STM32.
+That allows to have power via USB for flashing, but also means i can have most of the power comming from the 24V PSU not the USB bus.
+
+Nope ive decided against that, i will just add a jumper to pick between them, i dont feel like adding $2-4 of components.
+
+trying to pick resistors for the voltage divider is suprisingly tricky
+<img width="1520" height="1136" alt="image" src="https://github.com/user-attachments/assets/089b5ec5-25b6-426c-85a3-8ca824fb32a2" />
+
+Anddd there we go high efficiency 3.3v reg, that took a while
+<img width="2327" height="926" alt="image" src="https://github.com/user-attachments/assets/af427afc-dc48-40d4-8ed6-98ceb9490f8a" />
+
+
 
 
 
