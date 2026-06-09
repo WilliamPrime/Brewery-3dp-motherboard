@@ -93,6 +93,9 @@ stop2 - 14:21
 start3- 16:00
 stop3 - 17:37
 
+start4 - 21:19
+stop4 22:36
+
 first task of toady
 
 ## sort out OVP for the thermistors
@@ -140,8 +143,30 @@ trying to pick resistors for the voltage divider is suprisingly tricky
 Anddd there we go high efficiency 3.3v reg, that took a while
 <img width="2327" height="926" alt="image" src="https://github.com/user-attachments/assets/af427afc-dc48-40d4-8ed6-98ceb9490f8a" />
 
+I also found another project with similar goals 
+that being [prunt3d](https://prunt3d.com/), they used an ESD diode that appears wayy smaller than the one i was going to use ,which is nice, so ill use the [D55V0M1B2WS-7](https://www.lcsc.com/product-detail/C1976275.html) instead of the [ST SMBJ48A-TR](https://www.lcsc.com/product-detail/C133659.html) i was going to use
+
+I did a little bit more work on the 3.3V reg, I may have forgotten a cap, however I added it back in so its fine.
+Ive also been picking parts for some things as I go and adding them into my cart in LCSC
+<img width="1637" height="671" alt="image" src="https://github.com/user-attachments/assets/04381399-cd52-42d9-977f-4c2e31b27101" />
 
 
+Currently the schematic looks like this <img width="983" height="1618" alt="image" src="https://github.com/user-attachments/assets/a90a1ac0-5932-4f27-90c4-97078532834a" />
+
+currently the checklist looks like this, same ammount of things need doing, but ive still made good progress on the supporting components.
+- [x] pick an MCU
+- [ ] sort out OVP for the thermistors
+- [ ] sort out OCP for the fans
+- [ ] sort out how im doing to do selectable voltage for the fans
+- [ ] pick mosfets for the fans
+- [ ] start on the schematic
+- [ ] bom optimisation
+
+## Selectable voltage for the fans
+
+For some reason i kind of feel like doing more volage regulator stuff
+
+, if I want 5V and 12V options for fans, I probably need to drop down the 24V to that
 
 
 
