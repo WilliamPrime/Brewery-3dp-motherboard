@@ -1,10 +1,4 @@
-# Day 1 07/06/2026 x hours
-
-start1 - 22:20 
-stop 1 - 22:52 
-
-start2 - 22:55  
-stop2 - 23:58
+# Day 1 07/06/2026 1.5 hours
 
 ## So im starting this project
 My first experience with modifying a klipper board was moddifying the [klipper expander by timmit99](https://github.com/timmit99/Klipper-Expander), to have bigger mosfets as I wanted to attach some chunkier fans that wanted over 4A.
@@ -82,21 +76,7 @@ Onto the next part! I suspect this might be a tad tricky and involve me learning
 
 spent some time learning about op amps as i kept spotting them in some thermistor circuits.
 
-# Day 2 08/06/2026 x hours
-
-start1 - 11:23 
-stop 1 - 12:18
-
-start2 - 12:38
-stop2 - 14:21
-
-start3- 16:00
-stop3 - 17:37
-
-start4 - 21:19
-stop4 22:36
-
-first task of toady
+# Day 2 08/06/2026 5.7 hours
 
 ## sort out OVP for the thermistors
 
@@ -169,4 +149,45 @@ For some reason i kind of feel like doing more volage regulator stuff
 , if I want 5V and 12V options for fans, I probably need to drop down the 24V to that
 
 
+# Day 3 09/06/2026  3.05 hours
+
+Im still working on the selectable fan votlage
+still working on putting together a pair of buck converters so I can have a 5V and a 12V rail without needing the user to use external power supplies.
+
+<img width="1695" height="829" alt="image" src="https://github.com/user-attachments/assets/fdb3a163-77c8-4d02-9cee-4219c074ca52" />
+
+Im not using the mosfet recommened by TI since its really expensive, I found an alternative thats substantially cheaper, i do need to make my own footprint which is normally ok,
+but this is REALLYY confusing me
+<img width="1115" height="841" alt="image" src="https://github.com/user-attachments/assets/ee69fe5d-d6b2-4b34-b563-d07d65ea89a1" />
+
+In the end i just used coordinates to align everything
+<img width="598" height="529" alt="image" src="https://github.com/user-attachments/assets/68d8626d-703c-4311-8acb-6b1d7fba0486" />
+
+Since i picked an IC thats super versatile
+my 5v converter looks like this
+<img width="1615" height="714" alt="image" src="https://github.com/user-attachments/assets/a0b12fb8-1355-47f0-a82e-9ea245601222" />
+and my 12v like this
+<img width="1651" height="729" alt="image" src="https://github.com/user-attachments/assets/e22e21a3-c4c8-4216-bbe1-5c4bc059390f" />
+
+All that changes is two resistors comming out of FB that determine the voltage output.
+
+
+Im getting reallyy confused how to get mosfets to do what i want 
+
+<img width="1552" height="664" alt="image" src="https://github.com/user-attachments/assets/f02c0687-7abc-4685-a0bd-f06a7ff06221" />
+
+I was going to have a 3 switch, dip switch ,and then use that to let the use select between 5, 12, and 24v.
+and then have each switch control a mosfet
+
+Ignore how awfully messy this is
+<img width="1774" height="985" alt="image" src="https://github.com/user-attachments/assets/91265d29-c940-4a14-bea4-f7b58ccde64f" />
+
+for the 5v rail it works
+<img width="1700" height="965" alt="image" src="https://github.com/user-attachments/assets/b5443693-263e-4304-ae03-2567c6a3588e" />
+but then after that
+<img width="1649" height="942" alt="image" src="https://github.com/user-attachments/assets/16dbf417-46a9-4cf8-9349-56a6079d8e6d" />
+the 12v or 24v rails will start backfeeding the 5v, and causing the source to be at 12v or 24v, which is higher than the drain at 5v, so current flows
+
+I dont know how to fix this as I have no clue what i need to do to fix it.
+So i need to watch youtube video or find some way to learn about them that dont just confuse me 
 
