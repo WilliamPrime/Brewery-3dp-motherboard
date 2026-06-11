@@ -191,3 +191,60 @@ the 12v or 24v rails will start backfeeding the 5v, and causing the source to be
 I dont know how to fix this as I have no clue what i need to do to fix it.
 So i need to watch youtube video or find some way to learn about them that dont just confuse me 
 
+# 11/06/2026 7.3 hours
+
+## getting on with it, addressing scope creep that happened before the project started
+First thing i went and did was look at overcurrent protection for the fan ports, since i have so many, it would add AT LEAST $12 IC cost alone ignoring all the extra passives.
+It would also add a bunch of complexity, so i dont need it, bye bye fan  OCP, long live the 12A or 30A fuse protecting the input terminals!
+
+originally i wanted to do the voltage switching via dip switches, jumpers can just be kind of annoying, however i couldnt figure out how to set up an ideal switch model thingy with mosfets, so there would have been all sort of backcurrent issues. So i will do it the way that ive seen other boards do it, with jumpers. Im not the biggest fan of the jumper method since at high currents im semi worried about melting things, but I guess its "fine", its still a nice feature.
+How many people use their JST-XH ports at 3A anyway?
+
+Here is one of MANY attempts to get something to work in [Faldstad](https://www.falstad.com/circuit/), they often would have weird issues like the output volage being lower than I expected, with the cause of the voltage drop really not being clear. 
+<img width="775" height="787" alt="image" src="https://github.com/user-attachments/assets/ae8725ed-fc5c-464a-85fb-19bc25cfb238" />
+
+
+Still staying on the theme of fans, I need to pick mosfets for them, I think i will use the same mosfets that i used for the buck converters, massively overspecced , I DO NOT need 45A at 30V, however they are compact and cheap at ~$0.089 per mosfet,so still a perfectly reasonable choice . Yipeee ive avoided adding another part to the BOM.
+
+So an indiviual fan circuit looks like this,
+<img width="504" height="501" alt="image" src="https://github.com/user-attachments/assets/4295368a-42f5-4154-96ea-fa1ccc5511d6" />
+
+And 12 of them like this.
+<img width="454" height="1348" alt="image" src="https://github.com/user-attachments/assets/2396265c-72a3-406d-a004-2466f2a2193f" />
+
+
+
+I chose to rename the FanH to Heaters1-3, it just felt correct give the power the mosfets are capable off. As the mosfets are capable of 45A, there will be a fuse rated at ~30A to protect the board and terminals.
+<img width="1836" height="532" alt="image" src="https://github.com/user-attachments/assets/3289518e-b57b-426d-940e-7bc22f9eca3d" />
+
+
+Ive also ditched overcurrent protection for the thermistors, I have added ESD protection in the form of an ESD diode, and some resistors to hopefully stop reduce how nasty any ESD getting to the op amp is.
+<img width="1222" height="1502" alt="image" src="https://github.com/user-attachments/assets/5e497d27-92cb-48d0-a680-f0f9dd94bef7" />
+I picked the MCP6004 as the op amp for this board, its compact , low power, cheap, and more than good enough for this application.
+
+Thats all the thermistor stuff done!
+<img width="2793" height="675" alt="image" src="https://github.com/user-attachments/assets/af0cc0fe-21ab-4b73-ac91-bab04aa21205" />
+
+I did also shuffle arround all of the pins the thermistors were connected to because I forgot to check the pins had an ADC attached to them.
+<img width="996" height="1223" alt="image" src="https://github.com/user-attachments/assets/4f974cfe-52a5-4da8-824c-27f34aaa663a" />
+
+
+which means our list of things to do now looks like this
+- [x] pick an MCU
+- [x] thermistor op amps
+- [x] sort out how im doing to do selectable voltage for the fans
+- [x] pick mosfets for the fans
+- [x] start on the schematic
+- [ ] finish off schematics
+- [ ] tidy up schematics
+- [ ] bom optimisation
+- [ ] routing
+
+And the overall schematic now looks like this
+<img width="2405" height="1689" alt="image" src="https://github.com/user-attachments/assets/27d8d0a8-7d93-45ca-9456-f6f877cc6092" />
+the "tidy up schematics" box probably makes more sense now...
+
+
+
+
+
