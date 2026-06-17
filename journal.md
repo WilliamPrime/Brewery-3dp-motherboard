@@ -245,6 +245,33 @@ And the overall schematic now looks like this
 the "tidy up schematics" box probably makes more sense now...
 
 
+# 17/06/2026 lots of things comming together - 6 hours
+
+Ive been findning and making footprints for a bunch of components which means that the PCB currently looks like this, an unrouted glob of components.
+<img width="1129" height="766" alt="image" src="https://github.com/user-attachments/assets/e79f4f35-fdbd-4415-bfee-14577bea9517" />
+
+The current issue im trying to solve is making the caps for the voltage converters both cheap and preformant.
+Its just taking a chunk of time beacuse im also making simulations of the circuit and doing the calcuations specified in the data sheet of the bucks to try and work out how much voltage ripple the caps need to be able to withstand.
+
+
+
+<img width="1156" height="1301" alt="image" src="https://github.com/user-attachments/assets/1deee8cb-a043-4d91-881f-5d0b050979e2" />
+<img width="1494" height="1138" alt="image" src="https://github.com/user-attachments/assets/6cfd13ab-e2fd-4a14-a0c4-cc5bff00dd25" />
+Just going for what the dataseet suggest that i would need, the default caps are arroundd $1.03 each, and the only replacements for them at the same specs are arround $0.90 each.
+Once again my solution for this has been just replace the big cap with two smaller caps each with an ESR no more than twice of the original require ESR, with this method I think ive got those caps down to arround $0.12 per pair, which is cerainly a big improvment.
+It comes at the cost of space.
+
+Space is the other thing im fighting.
+As you can see in the below image, im trying to fit all of the component into the footprint "Cheap JLC limmit" as that would mean the 4 layer PCB would be 100x100mm , which JLC offers really good prices for, and sizes past that incur an engineering fee, which i want to avoid to keep costs low.
+<img width="1231" height="900" alt="image" src="https://github.com/user-attachments/assets/7d769f40-1aff-4df6-9322-f858caf83721" />
+
+Im considering removing one or two of the heater since their terminals are really large.
+Im also considering switching from the cheap pairs of caps to the singe expensive caps if the footprint saved lets me use the cheaper 100x100mm 4 layer size.
+
+Im also considering putting components on both sides but that has its own issues for ease of assembly
+
+
+
 
 
 
