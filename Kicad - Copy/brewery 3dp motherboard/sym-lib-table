@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "symbols") (type "KiCad") (uri "${KIPRJMOD}/lib/symbols") (options "") (descr ""))
+	(lib (name "DOZ45N03T") (type "KiCad") (uri "C:/Users/WillByte/Documents/GitHub/USB-PD-3DP-MBO/KICADD/main/libs/symbols/DOZ45N03T.kicad_sym") (options "") (descr ""))
+)
