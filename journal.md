@@ -315,5 +315,39 @@ I should also add
 but that should wait for after ive finished the layout as current im still playing arround with how to organise things.
 
 
+# 22/06/2026 the last bit of routing is proving to be a bit of a pain 5 hours
+<img width="2621" height="1926" alt="image" src="https://github.com/user-attachments/assets/fd0fcb5e-5f98-4941-8933-e14a312b039f" />
+<img width="1761" height="1024" alt="image" src="https://github.com/user-attachments/assets/ebc74924-b3e2-46c1-82f6-ac51ae07c2e4" />
+trying to route everything is just becomeing more and more of a pain because the traces often connect to the wrong side and in a place that just doesnt make sense.
 
+I recon the soluation to this is abandoing a pin numbering scheme that makes sense, making a list of all pins with ADC and just picking ones that minimise the ammount of crossing over i need.
+The crossing over is really annoying as the vias just prove to be in the way again and again.
+
+PA0-7
+PB0, PB1
+PC0-5
+PF3-10
+
+are the 24 GPIO pins i can use to get an ADC connection.
+
+Given there are 24 and I need to use 20 of them, I dont think its going to give me a ton of flexibility to stop traces needing to travel to the bottom of the chip instead of the top, but knowing which i can play with should still help in avoiding some of the crossing over.
+
+Ive chucked a blue box next to each pin i can juggle arorund.
+<img width="726" height="973" alt="image" src="https://github.com/user-attachments/assets/3e10502e-2ec8-470e-9ee8-2b5771835a15" />
+
+I will also probably do the same for the PWM outputs
+<img width="808" height="942" alt="image" src="https://github.com/user-attachments/assets/665904b7-2c32-4aa0-8544-4d63d0ab1229" />
+
+I ended up getting a list of all the pins, and a list of which pins have an ADC in, and which have a PWM out.
+Then taking away the ADC in from the PWM out so i dont accidentally use a pin i want.
+
+I also removed pins where the TIM channel was used by multiple pins, leaving me with that selection of boxes
+
+The part i have routed are much neater, there are still all of the fan PWM inputs to route, so its too early to say how its truely turned out.
+
+I would also throw in a bit of DCR here and there to make DRC more bareable at the end.
+It may be a lot of errors, but it was a lot higher :sob: 
+<img width="674" height="519" alt="image" src="https://github.com/user-attachments/assets/cbe1db48-1d82-4c3f-a94e-f9f64690ce97" />
+
+Anyway, still lots more routing to do! 
 
