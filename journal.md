@@ -351,3 +351,39 @@ It may be a lot of errors, but it was a lot higher :sob:
 
 Anyway, still lots more routing to do! 
 
+
+# finishing off the PCB 23/06/2026 -6 hours
+
+This session has been a lot of cleaning things up, such as the routing for everything connecting to the MCU
+
+previously it looked like this
+<img width="2621" height="1926" alt="image (5)" src="https://github.com/user-attachments/assets/83d042a0-2106-4252-95c9-78c575fa876c" />
+That mess was only going to get worse, I hadnt even get routed half of the fans or any of the heaters.
+
+
+With everything routed to the MCU it looks like
+<img width="2091" height="1512" alt="image (6)" src="https://github.com/user-attachments/assets/f175cbbe-b8d9-4fe1-9fe5-7b9771e167ab" />
+which I think is a LOT cleaner
+
+I also spent a while trying to work my way through all of the DRC issues
+<img width="689" height="818" alt="image" src="https://github.com/user-attachments/assets/3433e3d1-0404-42aa-824f-2248a934116b" />
+that is the highest number of DRC errors ive ever seen.
+
+Some of the issues were harder to sovle and ive still not solved them, just ignored them as I think there is a good chance that its just KiCAD glitching out
+
+such as this scenario
+<img width="916" height="82" alt="image (8)" src="https://github.com/user-attachments/assets/69bc076c-cc2d-4399-8871-cb11edab4f04" />
+<img width="495" height="417" alt="image (7)" src="https://github.com/user-attachments/assets/4ef8478d-256d-471d-856c-342013bd6bc6" />
+<img width="304" height="942" alt="image (9)" src="https://github.com/user-attachments/assets/add99a92-7faf-427f-a35f-04811ce70016" />
+
+the anular for that hole should be 0.125mm , but kicad thinks its 0.0999999 no matter what i change the diameter to.
+I needed to change the anual to something larger so whatever PCB fab i pick can make it, and that still didnt fix it.
+If my PCB fab can do it, then im happy, kicad can go sulk about it some more or something.
+
+Anyway there were a LOT of DRC issues, it took a while.
+
+My next step is going to be trying to make a bom file with all of LCSC part numbers.
+
+
+
+
