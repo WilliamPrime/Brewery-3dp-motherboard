@@ -315,5 +315,102 @@ I should also add
 but that should wait for after ive finished the layout as current im still playing arround with how to organise things.
 
 
+# 22/06/2026 the last bit of routing is proving to be a bit of a pain 5 hours
+<img width="2621" height="1926" alt="image" src="https://github.com/user-attachments/assets/fd0fcb5e-5f98-4941-8933-e14a312b039f" />
+<img width="1761" height="1024" alt="image" src="https://github.com/user-attachments/assets/ebc74924-b3e2-46c1-82f6-ac51ae07c2e4" />
+trying to route everything is just becomeing more and more of a pain because the traces often connect to the wrong side and in a place that just doesnt make sense.
+
+I recon the soluation to this is abandoing a pin numbering scheme that makes sense, making a list of all pins with ADC and just picking ones that minimise the ammount of crossing over i need.
+The crossing over is really annoying as the vias just prove to be in the way again and again.
+
+PA0-7
+PB0, PB1
+PC0-5
+PF3-10
+
+are the 24 GPIO pins i can use to get an ADC connection.
+
+Given there are 24 and I need to use 20 of them, I dont think its going to give me a ton of flexibility to stop traces needing to travel to the bottom of the chip instead of the top, but knowing which i can play with should still help in avoiding some of the crossing over.
+
+Ive chucked a blue box next to each pin i can juggle arorund.
+<img width="726" height="973" alt="image" src="https://github.com/user-attachments/assets/3e10502e-2ec8-470e-9ee8-2b5771835a15" />
+
+I will also probably do the same for the PWM outputs
+<img width="808" height="942" alt="image" src="https://github.com/user-attachments/assets/665904b7-2c32-4aa0-8544-4d63d0ab1229" />
+
+I ended up getting a list of all the pins, and a list of which pins have an ADC in, and which have a PWM out.
+Then taking away the ADC in from the PWM out so i dont accidentally use a pin i want.
+
+I also removed pins where the TIM channel was used by multiple pins, leaving me with that selection of boxes
+
+The part i have routed are much neater, there are still all of the fan PWM inputs to route, so its too early to say how its truely turned out.
+
+I would also throw in a bit of DCR here and there to make DRC more bareable at the end.
+It may be a lot of errors, but it was a lot higher :sob: 
+<img width="674" height="519" alt="image" src="https://github.com/user-attachments/assets/cbe1db48-1d82-4c3f-a94e-f9f64690ce97" />
+
+Anyway, still lots more routing to do! 
 
 
+# finishing off the PCB 23/06/2026 -6 hours
+
+This session has been a lot of cleaning things up, such as the routing for everything connecting to the MCU
+
+previously it looked like this
+<img width="2621" height="1926" alt="image (5)" src="https://github.com/user-attachments/assets/83d042a0-2106-4252-95c9-78c575fa876c" />
+That mess was only going to get worse, I hadnt even get routed half of the fans or any of the heaters.
+
+
+With everything routed to the MCU it looks like
+<img width="2091" height="1512" alt="image (6)" src="https://github.com/user-attachments/assets/f175cbbe-b8d9-4fe1-9fe5-7b9771e167ab" />
+which I think is a LOT cleaner
+
+I also spent a while trying to work my way through all of the DRC issues
+<img width="689" height="818" alt="image" src="https://github.com/user-attachments/assets/3433e3d1-0404-42aa-824f-2248a934116b" />
+that is the highest number of DRC errors ive ever seen.
+
+Some of the issues were harder to sovle and ive still not solved them, just ignored them as I think there is a good chance that its just KiCAD glitching out
+
+such as this scenario
+<img width="916" height="82" alt="image (8)" src="https://github.com/user-attachments/assets/69bc076c-cc2d-4399-8871-cb11edab4f04" />
+<img width="495" height="417" alt="image (7)" src="https://github.com/user-attachments/assets/4ef8478d-256d-471d-856c-342013bd6bc6" />
+<img width="304" height="942" alt="image (9)" src="https://github.com/user-attachments/assets/add99a92-7faf-427f-a35f-04811ce70016" />
+
+the anular for that hole should be 0.125mm , but kicad thinks its 0.0999999 no matter what i change the diameter to.
+I needed to change the anual to something larger so whatever PCB fab i pick can make it, and that still didnt fix it.
+If my PCB fab can do it, then im happy, kicad can go sulk about it some more or something.
+
+Anyway there were a LOT of DRC issues, it took a while.
+
+My next step is going to be trying to make a bom file with all of LCSC part numbers.
+
+#24/06/2026 AHHHH - arround 4-6 hours
+
+most of this chunkkk of time has been spent picking components on LCSC
+<img width="287" height="1056" alt="image" src="https://github.com/user-attachments/assets/80be1f2c-fe6e-4916-a246-8b5c68d1ff7a" />
+The bom starts out looking like that, and then I needed to find the component in the circuit and check for any special requirements
+
+For example with the resistors used as a voltage divider for the thermistors i wanted them to be fairly accurate. 
+But for some other things like where the resistors were simply there for the purpose of limmitting current I would quite happily pick +-10% if it existed and was cheaper
+
+The caps were a bit tricker, as for some of them , picking a higher voltage rating would make them a lot pricier
+for example the 1210 footprint 4.7uF caps needed for the 3.3V voltage regulator,
+If you want then in 5V , they cost arround $0.05 each, but if they are exposed to the incomming 24-30V , they need to be rated to something higher like 36V
+which then makes them cost $0.23 each
+
+picking the voltage rarting for a cap was also interesting in situations like when the cap is used in a bunch of places, when it was a negligable ammount more i would go for 36V rated caps as that would be fine no matter the voltage input
+
+There was also a bunch of noticing stuff like "uh oh, why is that 0402 cap 10uF" and then proceeding to realised that needs to be bigger to actaully have that much capacitance
+
+or when i realised that the reistors i used to limmit the inrush current into the mosfet gates werent enough, it would cause an inrush higher than what the MCU GPIO pins were rated for.
+Which once again led downa rabbit hole of changing out components, re creating the BOM and copying over the stuff that was allready done.
+
+There were also some really annopying things i encountered, such as the voltage regulator i used for 3.3V and my chosen MCU both being out of stock on LCSC.
+After some research on LCSC i found an automotive variant of the vreg that was a little more, but a pin for pin replacement.
+
+The MCU was a bit trickier, but ultimatly i found a version with a higher temp rating , other than it was identical to the original MCU.
+Well, the price was also more, but changing the MCU would require a chunk more work and re routing, and its not like I chose an MCU that is EOL, so the project should still be recreatable in the future.
+
+That IC bom from the start now looks like this
+<img width="720" height="1349" alt="image" src="https://github.com/user-attachments/assets/0644d57e-5a4b-457e-a1b2-a855d6928300" />
+An LCSC part num next to every component.
