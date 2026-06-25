@@ -52,7 +52,7 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.3,
+          "corner_radius": 0.5,
           "corner_smoothing": 2,
           "fill_mode": 0,
           "hatch_gap": 1.5,
@@ -61,10 +61,10 @@
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
           "min_clearance": 0.02,
-          "min_island_area": 10.0,
+          "min_island_area": 15.0,
           "min_thickness": 0.25,
           "pad_connection": 2,
-          "remove_islands": 1,
+          "remove_islands": 2,
           "thermal_relief_gap": 1.0,
           "thermal_relief_spoke_width": 1.0
         }
@@ -76,7 +76,20 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "isolated_copper|547370777|-29228610|27b7a7c7-8f5f-44f9-9c02-72752fbed7f8|00000000-0000-0000-0000-000000000000",
+          "lit connected to the Vbus fuse"
+        ],
+        [
+          "isolated_copper|547420666|-29214925|27b7a7c7-8f5f-44f9-9c02-72752fbed7f8|00000000-0000-0000-0000-000000000000",
+          "lit connected to the Vbus fuse"
+        ],
+        [
+          "silk_over_copper|644082500|-6907278|2c7beb1e-6f77-431a-8e51-49ad2ebee1a6|e81f7ec4-43af-44a3-ab7c-39c0b9e1005b",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -160,9 +173,9 @@
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
+        "min_via_annular_width": 0.099,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -683,7 +696,7 @@
         "uuid": "63771b13-dd98-4833-96bf-ef6b5d3ded40"
       }
     ],
-    "used_designators": "C4,C22-24,D49-52,R5,R90-93",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
