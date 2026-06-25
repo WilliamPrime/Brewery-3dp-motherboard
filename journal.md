@@ -384,6 +384,33 @@ Anyway there were a LOT of DRC issues, it took a while.
 
 My next step is going to be trying to make a bom file with all of LCSC part numbers.
 
+#24/06/2026 AHHHH - arround 4-6 hours
 
+most of this chunkkk of time has been spent picking components on LCSC
+<img width="287" height="1056" alt="image" src="https://github.com/user-attachments/assets/80be1f2c-fe6e-4916-a246-8b5c68d1ff7a" />
+The bom starts out looking like that, and then I needed to find the component in the circuit and check for any special requirements
 
+For example with the resistors used as a voltage divider for the thermistors i wanted them to be fairly accurate. 
+But for some other things like where the resistors were simply there for the purpose of limmitting current I would quite happily pick +-10% if it existed and was cheaper
 
+The caps were a bit tricker, as for some of them , picking a higher voltage rating would make them a lot pricier
+for example the 1210 footprint 4.7uF caps needed for the 3.3V voltage regulator,
+If you want then in 5V , they cost arround $0.05 each, but if they are exposed to the incomming 24-30V , they need to be rated to something higher like 36V
+which then makes them cost $0.23 each
+
+picking the voltage rarting for a cap was also interesting in situations like when the cap is used in a bunch of places, when it was a negligable ammount more i would go for 36V rated caps as that would be fine no matter the voltage input
+
+There was also a bunch of noticing stuff like "uh oh, why is that 0402 cap 10uF" and then proceeding to realised that needs to be bigger to actaully have that much capacitance
+
+or when i realised that the reistors i used to limmit the inrush current into the mosfet gates werent enough, it would cause an inrush higher than what the MCU GPIO pins were rated for.
+Which once again led downa rabbit hole of changing out components, re creating the BOM and copying over the stuff that was allready done.
+
+There were also some really annopying things i encountered, such as the voltage regulator i used for 3.3V and my chosen MCU both being out of stock on LCSC.
+After some research on LCSC i found an automotive variant of the vreg that was a little more, but a pin for pin replacement.
+
+The MCU was a bit trickier, but ultimatly i found a version with a higher temp rating , other than it was identical to the original MCU.
+Well, the price was also more, but changing the MCU would require a chunk more work and re routing, and its not like I chose an MCU that is EOL, so the project should still be recreatable in the future.
+
+That IC bom from the start now looks like this
+<img width="720" height="1349" alt="image" src="https://github.com/user-attachments/assets/0644d57e-5a4b-457e-a1b2-a855d6928300" />
+An LCSC part num next to every component.
