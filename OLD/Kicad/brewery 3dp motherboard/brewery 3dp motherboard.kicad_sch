@@ -4898,12 +4898,6 @@
 		(uuid "4cdb3abe-1813-498f-8770-dbf9d695ed46")
 	)
 	(junction
-		(at 27.94 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4dc2b559-1647-438e-9b2f-9e0a921133fc")
-	)
-	(junction
 		(at 257.81 212.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4998,12 +4992,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "adcb5c3c-e089-4635-8bbd-bee8c1739097")
-	)
-	(junction
-		(at 27.94 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ba1e1805-78ca-4127-9306-ab076ce76fe5")
 	)
 	(junction
 		(at 368.3 29.21)
@@ -5106,16 +5094,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd49e9a9-c2ec-4f40-905e-1b0c63959b7d")
-	)
-	(wire
-		(pts
-			(xy 35.56 39.37) (xy 27.94 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01f2567a-6320-4535-9927-fbbb4f3f8ee3")
 	)
 	(wire
 		(pts
@@ -5349,16 +5327,6 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 39.37) (xy 27.94 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "325b3215-ef94-4a6a-bb74-456690a48e6b")
-	)
-	(wire
-		(pts
 			(xy 299.72 39.37) (xy 302.26 39.37)
 		)
 		(stroke
@@ -5436,16 +5404,6 @@
 			(type default)
 		)
 		(uuid "43e070a9-bacb-44d2-8362-b9f33ee01332")
-	)
-	(wire
-		(pts
-			(xy 27.94 34.29) (xy 27.94 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45f57dbf-a745-4a00-94df-63510a6515e9")
 	)
 	(wire
 		(pts
@@ -5759,6 +5717,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 39.37) (xy 24.13 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87c0c573-d252-4dd4-b5a1-5b041d31f853")
+	)
+	(wire
+		(pts
 			(xy 254 204.47) (xy 254 207.01)
 		)
 		(stroke
@@ -5936,16 +5904,6 @@
 			(type default)
 		)
 		(uuid "9cb92175-4aca-4b99-a302-aa40c5640de0")
-	)
-	(wire
-		(pts
-			(xy 27.94 38.1) (xy 24.13 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d2a70b5-7c43-4b2b-8339-cc56878cb02d")
 	)
 	(wire
 		(pts
@@ -6279,16 +6237,6 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 38.1) (xy 27.94 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd154552-38d0-47de-bc5a-d235b249dd18")
-	)
-	(wire
-		(pts
 			(xy 398.78 26.67) (xy 398.78 29.21)
 		)
 		(stroke
@@ -6366,16 +6314,6 @@
 			(type default)
 		)
 		(uuid "eec9f977-0e50-4e43-bac7-5d64a1f838ab")
-	)
-	(wire
-		(pts
-			(xy 35.56 34.29) (xy 27.94 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f27a48fc-6f94-4d5e-8f16-6cd6ef965553")
 	)
 	(wire
 		(pts
@@ -6463,7 +6401,31 @@
 	)
 	(global_label "Thermistor13"
 		(shape input)
-		(at 264.16 125.73 180)
+		(at 330.2 146.05 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0cc1dad3-4056-441c-89e4-1cfe17eaf9a0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 344.3732 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "Thermistor2"
+		(shape input)
+		(at 264.16 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6471,9 +6433,9 @@
 			)
 			(justify right)
 		)
-		(uuid "0cc1dad3-4056-441c-89e4-1cfe17eaf9a0")
+		(uuid "0fd6d882-7820-4d7c-bbdd-e82220203713")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 125.73 0)
+			(at 249.9868 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6485,43 +6447,19 @@
 			)
 		)
 	)
-	(global_label "Thermistor2"
-		(shape input)
-		(at 330.2 148.59 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0fd6d882-7820-4d7c-bbdd-e82220203713")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "Thermistor7"
 		(shape input)
-		(at 330.2 146.05 0)
+		(at 264.16 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "148c7d71-784b-4275-86c6-417ea9095a97")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 146.05 0)
+			(at 249.9868 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6529,7 +6467,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -6751,17 +6689,17 @@
 	)
 	(global_label "Thermistor4"
 		(shape input)
-		(at 330.2 92.71 0)
+		(at 264.16 133.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "3a2715b7-62f3-4cdd-b650-9a86857792ad")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 92.71 0)
+			(at 249.9868 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6769,7 +6707,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -6847,17 +6785,17 @@
 	)
 	(global_label "Thermistor6"
 		(shape input)
-		(at 330.2 67.31 0)
+		(at 264.16 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "3e7c248f-6964-4be4-ac24-1c1ca732ac7f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 67.31 0)
+			(at 249.9868 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6865,7 +6803,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -7063,17 +7001,17 @@
 	)
 	(global_label "Fan5"
 		(shape input)
-		(at 330.2 102.87 0)
+		(at 264.16 173.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "532a2876-b69e-480e-b510-0dd6ebc5c7fd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.7813 102.87 0)
+			(at 256.5787 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7081,23 +7019,23 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
 	(global_label "Heater4"
 		(shape input)
-		(at 330.2 52.07 0)
+		(at 34.29 256.54 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "55ba0679-7f19-4731-956b-4481c37eb986")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 340.5633 52.07 0)
+			(at 23.9267 256.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7105,7 +7043,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -7183,31 +7121,7 @@
 	)
 	(global_label "Thermistor17"
 		(shape input)
-		(at 264.16 138.43 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "61266a0a-83d5-43c4-b0f1-ca2e6bd47ec9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "Fan10"
-		(shape input)
-		(at 330.2 115.57 0)
+		(at 330.2 57.15 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7215,9 +7129,9 @@
 			)
 			(justify left)
 		)
-		(uuid "642f661c-9065-4595-b02c-187d6110e628")
+		(uuid "61266a0a-83d5-43c4-b0f1-ca2e6bd47ec9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 338.9908 115.57 0)
+			(at 344.3732 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7229,9 +7143,33 @@
 			)
 		)
 	)
+	(global_label "Fan10"
+		(shape input)
+		(at 264.16 196.85 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "642f661c-9065-4595-b02c-187d6110e628")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 255.3692 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "Heater3"
 		(shape input)
-		(at 330.2 54.61 0)
+		(at 330.2 212.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7241,7 +7179,7 @@
 		)
 		(uuid "667ac6cd-f797-4824-8ac2-b04b7012648b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 340.5633 54.61 0)
+			(at 340.5633 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7279,17 +7217,17 @@
 	)
 	(global_label "Fan1"
 		(shape input)
-		(at 264.16 105.41 180)
+		(at 330.2 214.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "6825d98b-0c23-45d5-b2c1-a426c9996295")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.5787 105.41 0)
+			(at 337.7813 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7297,7 +7235,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -7351,17 +7289,17 @@
 	)
 	(global_label "Thermistor18"
 		(shape input)
-		(at 264.16 135.89 180)
+		(at 330.2 59.69 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "748e1506-f47c-4b90-a6ff-ac5162819d95")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 135.89 0)
+			(at 344.3732 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7369,23 +7307,23 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
 	(global_label "Thermistor14"
 		(shape input)
-		(at 264.16 133.35 180)
+		(at 330.2 148.59 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "76bd2a66-48ab-4151-aab7-a73ff3d64cb7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 133.35 0)
+			(at 344.3732 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7393,7 +7331,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -7471,55 +7409,7 @@
 	)
 	(global_label "Fan7"
 		(shape input)
-		(at 330.2 107.95 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "85da9065-c4da-4014-b2e7-4d5b5fdc32d9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.7813 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "Fan6"
-		(shape input)
-		(at 330.2 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8b2ca601-eb53-423b-bccb-3d2442fa44ef")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.7813 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "Thermistor20"
-		(shape input)
-		(at 264.16 140.97 180)
+		(at 264.16 184.15 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7527,9 +7417,9 @@
 			)
 			(justify right)
 		)
-		(uuid "8b46b56c-8b82-4305-93a1-110f94bef628")
+		(uuid "85da9065-c4da-4014-b2e7-4d5b5fdc32d9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 140.97 0)
+			(at 256.5787 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7538,6 +7428,54 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "Fan6"
+		(shape input)
+		(at 264.16 176.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8b2ca601-eb53-423b-bccb-3d2442fa44ef")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 256.5787 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "Thermistor20"
+		(shape input)
+		(at 330.2 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b46b56c-8b82-4305-93a1-110f94bef628")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 344.3732 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -7639,17 +7577,17 @@
 	)
 	(global_label "Thermistor1"
 		(shape input)
-		(at 330.2 59.69 0)
+		(at 264.16 125.73 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "908dbdb0-ed2e-4d48-8d78-af627b1caa0f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 59.69 0)
+			(at 249.9868 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7657,7 +7595,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -7759,17 +7697,17 @@
 	)
 	(global_label "Thermistor15"
 		(shape input)
-		(at 264.16 128.27 180)
+		(at 330.2 52.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "b1132a89-75ea-47da-8a6a-c2b9993f9259")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 128.27 0)
+			(at 344.3732 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7777,7 +7715,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -7807,17 +7745,17 @@
 	)
 	(global_label "Fan2"
 		(shape input)
-		(at 264.16 107.95 180)
+		(at 330.2 217.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "b396bec2-17a2-4c72-afe3-28f4132fbc4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.5787 107.95 0)
+			(at 337.7813 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7825,7 +7763,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -7855,7 +7793,7 @@
 	)
 	(global_label "Fan4"
 		(shape input)
-		(at 330.2 100.33 0)
+		(at 330.2 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7865,7 +7803,7 @@
 		)
 		(uuid "c8a178e0-ae78-4d10-a779-1c1fff797a7c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.7813 100.33 0)
+			(at 337.7813 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7879,17 +7817,17 @@
 	)
 	(global_label "Fan11"
 		(shape input)
-		(at 264.16 176.53 180)
+		(at 330.2 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "ca3409e6-ff54-4eb8-8ad6-991167b40331")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 255.3692 176.53 0)
+			(at 338.9908 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7897,13 +7835,13 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
 	(global_label "Heater2"
 		(shape input)
-		(at 330.2 118.11 0)
+		(at 330.2 209.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7913,7 +7851,7 @@
 		)
 		(uuid "cae26b42-91ac-49d0-99b1-25372c01a36e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 340.5633 118.11 0)
+			(at 340.5633 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7927,7 +7865,31 @@
 	)
 	(global_label "Thermistor5"
 		(shape input)
-		(at 330.2 95.25 0)
+		(at 264.16 135.89 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cbe568f6-3105-4d66-9fab-ff8871a72841")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 249.9868 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "Thermistor19"
+		(shape input)
+		(at 330.2 62.23 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7935,9 +7897,9 @@
 			)
 			(justify left)
 		)
-		(uuid "cbe568f6-3105-4d66-9fab-ff8871a72841")
+		(uuid "ce1b1fef-98e7-4762-ab4a-5cf369bf026f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 95.25 0)
+			(at 344.3732 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7949,43 +7911,19 @@
 			)
 		)
 	)
-	(global_label "Thermistor19"
-		(shape input)
-		(at 264.16 143.51 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ce1b1fef-98e7-4762-ab4a-5cf369bf026f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "Fan12"
 		(shape input)
-		(at 264.16 173.99 180)
+		(at 330.2 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "d1a11a56-3121-442c-a40d-38c39ace5d49")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 255.3692 173.99 0)
+			(at 338.9908 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7993,7 +7931,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -8047,17 +7985,17 @@
 	)
 	(global_label "Thermistor8"
 		(shape input)
-		(at 330.2 64.77 0)
+		(at 264.16 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "de78d002-7e52-4947-8f36-984d557be5f7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 64.77 0)
+			(at 249.9868 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8065,23 +8003,23 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
 	(global_label "Thermistor3"
 		(shape input)
-		(at 330.2 62.23 0)
+		(at 264.16 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "e07d21f1-6740-4cfa-b723-adf96efd5e95")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.3732 62.23 0)
+			(at 249.9868 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8089,7 +8027,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -8119,30 +8057,6 @@
 	)
 	(global_label "Fan3"
 		(shape input)
-		(at 264.16 110.49 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e574d95a-8689-410e-bf44-d3dd89a3e4c4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.5787 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "Fan9"
-		(shape input)
 		(at 330.2 113.03 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8151,7 +8065,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e629366a-de5c-46e2-b467-19b89d35752e")
+		(uuid "e574d95a-8689-410e-bf44-d3dd89a3e4c4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 337.7813 113.03 0)
 			(hide yes)
@@ -8162,6 +8076,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "Fan9"
+		(shape input)
+		(at 264.16 194.31 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e629366a-de5c-46e2-b467-19b89d35752e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 256.5787 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -8191,7 +8129,7 @@
 	)
 	(global_label "Heater1"
 		(shape input)
-		(at 330.2 120.65 0)
+		(at 330.2 95.25 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8201,7 +8139,7 @@
 		)
 		(uuid "f1f5a404-f6c8-4c32-b75e-7cacc340bf5a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 340.5633 120.65 0)
+			(at 340.5633 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8263,17 +8201,17 @@
 	)
 	(global_label "Thermistor16"
 		(shape input)
-		(at 264.16 130.81 180)
+		(at 330.2 54.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "f74f25ff-a4c2-417e-876d-fa1395019331")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7773 130.81 0)
+			(at 344.3732 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8281,7 +8219,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -8335,17 +8273,17 @@
 	)
 	(global_label "Fan8"
 		(shape input)
-		(at 330.2 110.49 0)
+		(at 264.16 189.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "fb5fbeb1-b7c3-4e47-a45c-7f7c26c62cbe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.7813 110.49 0)
+			(at 256.5787 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8353,7 +8291,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -8999,7 +8937,7 @@
 				)
 			)
 		)
-		(property "Value" "43"
+		(property "Value" "22"
 			(at 339.09 82.042 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9009,7 +8947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 339.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -9090,7 +9028,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 257.81 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -9140,7 +9078,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 27.94 40.64 0)
+		(at 24.13 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9150,7 +9088,7 @@
 		(dnp no)
 		(uuid "176fc8f6-e4a6-4f69-a6f9-9add2fc5befd")
 		(property "Reference" "#PWR051"
-			(at 27.94 46.99 0)
+			(at 24.13 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9161,7 +9099,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 25.146 43.18 0)
+			(at 21.336 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9171,7 +9109,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 40.64 0)
+			(at 24.13 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9182,7 +9120,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 40.64 0)
+			(at 24.13 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9193,7 +9131,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 40.64 0)
+			(at 24.13 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9406,7 +9344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 284.48 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -9553,7 +9491,7 @@
 				)
 			)
 		)
-		(property "Value" "43"
+		(property "Value" "22"
 			(at 338.836 75.692 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9563,7 +9501,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 339.09 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10683,7 +10621,7 @@
 				)
 			)
 		)
-		(property "Value" "2k"
+		(property "Value" "100"
 			(at 229.362 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12726,7 +12664,7 @@
 				)
 			)
 		)
-		(property "Value" "20k"
+		(property "Value" "4.7k"
 			(at 389.382 222.758 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13674,7 +13612,7 @@
 				)
 			)
 		)
-		(property "Value" "2k"
+		(property "Value" "100"
 			(at 368.3 217.932 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13924,7 +13862,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 254 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -14121,89 +14059,6 @@
 			(project "brewery 3dp motherboard"
 				(path "/63771b13-dd98-4833-96bf-ef6b5d3ded40"
 					(reference "#PWR0119")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 35.56 36.83 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dd78a7cc-3f3c-449b-8add-12f6769f6178")
-		(property "Reference" "R94"
-			(at 41.91 35.052 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0Ohm"
-			(at 41.91 37.592 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "footprints:Milliohm HoT-2-4.5-11-I"
-			(at 35.56 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 35.56 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 35.56 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "39878cb1-fc82-43fb-a9f0-b9fb1613e4a9")
-		)
-		(pin "1"
-			(uuid "73855e01-3ad7-4dcf-b5ee-3ecd0c524716")
-		)
-		(instances
-			(project "brewery 3dp motherboard"
-				(path "/63771b13-dd98-4833-96bf-ef6b5d3ded40"
-					(reference "R94")
 					(unit 1)
 				)
 			)

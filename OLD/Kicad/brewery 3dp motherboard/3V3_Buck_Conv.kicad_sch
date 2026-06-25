@@ -1509,22 +1509,10 @@
 		(uuid "04f7c9e2-632d-49ba-9e15-c3823ae3bdfa")
 	)
 	(junction
-		(at 210.82 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05c61274-c1c6-4331-a50a-a66eaee067ee")
-	)
-	(junction
 		(at 111.76 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10582936-dc16-447e-b31b-eaacdb0ed9b8")
-	)
-	(junction
-		(at 222.25 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2cf66637-b57c-4d03-9bcf-3e5b15ccc273")
 	)
 	(junction
 		(at 91.44 102.87)
@@ -1587,16 +1575,10 @@
 		(uuid "84ac1d44-e612-479e-8371-094f94b85b3c")
 	)
 	(junction
-		(at 222.25 109.22)
+		(at 210.82 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dbdc6437-1a97-4a55-ad7c-25544d536b86")
-	)
-	(junction
-		(at 210.82 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e2e005fc-3f66-4a84-a1a8-e9c793ec52d8")
+		(uuid "f1c8d3b6-c1a7-4634-bded-349c55ca532b")
 	)
 	(junction
 		(at 91.44 92.71)
@@ -1629,16 +1611,6 @@
 			(type default)
 		)
 		(uuid "0a7a455d-5a3f-43e0-b4ad-c3fefea074e3")
-	)
-	(wire
-		(pts
-			(xy 222.25 118.11) (xy 222.25 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d53e748-ebc1-4e75-8ca8-98a59a13cbfd")
 	)
 	(wire
 		(pts
@@ -1762,16 +1734,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 109.22) (xy 228.6 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d50028c-6ddc-437e-b14a-edab100e3b0b")
-	)
-	(wire
-		(pts
 			(xy 171.45 104.14) (xy 181.61 104.14)
 		)
 		(stroke
@@ -1829,26 +1791,6 @@
 			(type default)
 		)
 		(uuid "6b15a4d1-d455-4522-8376-5e6dd71b7b99")
-	)
-	(wire
-		(pts
-			(xy 222.25 121.92) (xy 228.6 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ea004c8-4937-476e-9ab8-ede74d314642")
-	)
-	(wire
-		(pts
-			(xy 222.25 109.22) (xy 222.25 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77639b91-855e-4741-814d-9a91234ddaed")
 	)
 	(wire
 		(pts
@@ -2092,17 +2034,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 121.92) (xy 222.25 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec4400e0-6dac-4a7e-92e4-7485ded9b54e")
-	)
-	(wire
-		(pts
-			(xy 210.82 109.22) (xy 222.25 109.22)
+			(xy 210.82 109.22) (xy 217.17 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2627,87 +2559,6 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 222.25 115.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4131a4b1-2fa0-4006-a57a-3c616508c344")
-		(property "Reference" "C35"
-			(at 224.536 113.792 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47uF"
-			(at 224.536 116.332 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 222.25 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 222.25 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "91698d52-79f6-4df6-9e4f-c7524d55355d")
-		)
-		(pin "2"
-			(uuid "8e4517fd-53b7-4b89-be74-dbb801851b3c")
-		)
-		(instances
-			(project "brewery 3dp motherboard"
-				(path "/63771b13-dd98-4833-96bf-ef6b5d3ded40/0095169d-a3a6-414c-bad9-baaadd20e60a"
-					(reference "C35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
 		(at 184.15 106.68 0)
 		(unit 1)
 		(body_style 1)
@@ -2788,83 +2639,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 228.6 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5c21f721-e465-4a61-bebf-71cf3dae117b")
-		(property "Reference" "#PWR038"
-			(at 228.6 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 231.648 123.952 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 228.6 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 228.6 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dc0444c7-b6ae-46cd-ba25-be4a44fc9a9d")
-		)
-		(instances
-			(project "brewery 3dp motherboard"
-				(path "/63771b13-dd98-4833-96bf-ef6b5d3ded40/0095169d-a3a6-414c-bad9-baaadd20e60a"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 111.76 97.79 0)
 		(unit 1)
@@ -2897,7 +2671,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 111.76 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3039,7 +2813,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 228.6 109.22 0)
+		(at 217.17 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3050,7 +2824,7 @@
 		(fields_autoplaced yes)
 		(uuid "6aa1bcd7-8ab6-4907-b992-d0e591e31422")
 		(property "Reference" "#PWR032"
-			(at 228.6 113.03 0)
+			(at 217.17 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3061,7 +2835,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 228.6 104.14 0)
+			(at 217.17 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3071,7 +2845,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 109.22 0)
+			(at 217.17 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3082,7 +2856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 109.22 0)
+			(at 217.17 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3093,7 +2867,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 228.6 109.22 0)
+			(at 217.17 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3806,7 +3580,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 123.19 97.79 0)
 			(hide yes)
 			(show_name no)
