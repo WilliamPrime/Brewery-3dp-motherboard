@@ -6965,30 +6965,6 @@
 			)
 		)
 	)
-	(global_label "NeoPixel2"
-		(shape input)
-		(at 34.29 264.16 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "47e5e818-e58c-426c-94cb-0d2b0de2973e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.8705 264.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "Thermistor2"
 		(shape input)
 		(at 172.72 80.01 180)
@@ -7106,30 +7082,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "NeoPixel1"
-		(shape input)
-		(at 34.29 261.62 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "58026b5e-0f7c-4f49-9057-30aee4c84a75")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.8705 261.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
