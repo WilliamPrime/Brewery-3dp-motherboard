@@ -41,3 +41,13 @@ So you could you could use the thermistors to do something like
 This board uses an STM32F407ZGT6 MCU, which is supported by mainline klipper and marlin.
 
 # BOM
+
+| Part              | Item cost | shipping+tax cost | Total cost for item(s) | Notes                                 |
+|-------------------|-----------|-------------------|------------------------|---------------------------------------|
+| LCSC components   | $157.72   | $39.63            | $190.90                | ordering enough to populate the 5PCBs |
+| JLC PCB + stencil | $92.09    | $48.06            | $140.15                | No PCBA, im handsoldering, the boards |
+|                   |           |                   |                        |                                       |
+
+Total cost $331.05
+
+There is a detailed break down of the parts to be ordered on LCSC [**here**](https://github.com/WilliamPrime/Brewery-3dp-motherboard/blob/main/PROD/Brewery_Alpha_0.01_LCSC%20bom.csv)
