@@ -414,3 +414,267 @@ Well, the price was also more, but changing the MCU would require a chunk more w
 That IC bom from the start now looks like this
 <img width="720" height="1349" alt="image" src="https://github.com/user-attachments/assets/0644d57e-5a4b-457e-a1b2-a855d6928300" />
 An LCSC part num next to every component.
+
+
+# Start of the build!!!
+
+you will probably notice that the build was uploaded all in one go, thats because when I was assembling the PCB I would have my laptop next to me for KiCad etc, and as wonderful as github is, loosing your progress because you accidentally close the chrome tab before you commit the changes to the .md is reallyyyy annoying , so I journalled everything into Obsidian notes, and then copy pasted to here!
+
+
+
+# 06/07/2026 PART ARRIVING!!! 0.5 hours
+
+wow the terminals are big, today was spent sorting the components into piles ready for as soon as the PCBs arrive!
+
+if you're wondering what piles i sort them into
+- resistors
+	- by value footprint, 
+	- if multiple of same value, smallest package first
+- capacitors
+	- by value footprint, 
+	- if multiple of same value, smallest package first
+- special SMD stuff
+	- stuff like op amps, micro conctrollers, mosfets etc
+- through hole stuff
+
+
+
+<img width="3000" height="4000" alt="20260706_135630" src="https://github.com/user-attachments/assets/a3ad94e2-4e6f-4d60-b017-04d6974f0f8a" />
+
+# 08/07/2026 PCBs ARRIVED TIME TO SOLDER!!! - 4h
+
+<img width="3000" height="3362" alt="20260708_174204" src="https://github.com/user-attachments/assets/f9725724-e3f9-46df-b610-940ec5e07210" />
+<img width="3000" height="4000" alt="20260708_174311" src="https://github.com/user-attachments/assets/d1bb2609-41dd-4a58-989b-43fd4d6d7579" />
+
+
+
+I got a decent stencil application, but i think  i accidentally went over the same area twice on the right hand side of the board, so there was a lot of paste there
+
+<img width="4000" height="3000" alt="20260708_211736" src="https://github.com/user-attachments/assets/bb230935-bdfc-4fcd-bc1f-961ddb6de838" />
+
+also made a good start onto placing components!!!
+
+<img width="3000" height="4000" alt="20260708_224349" src="https://github.com/user-attachments/assets/d4ffe230-3277-4960-85e8-1d60ac94c35f" />
+
+oh., and i regret using 0402, i can do it, its just that 0603 is soo muchhh easier, i can do 0603 with my fingers, 0402 and 0201 are just ,needlessly fiddly for a board like this.
+
+# 09/07/2026 still placing new parts on - 3h
+so, it says this is a new day in the journal, but urm, its past midnight!!!
+since i don't want all the flux in the paste to dry up and make my life harder, I kept placing components!!
+and wow there are a lot of components!
+
+<img width="4000" height="3000" alt="20260709_024031" src="https://github.com/user-attachments/assets/d1e40804-6244-4fec-be8b-6ac80ee84944" />
+
+
+i dont know why i didnt get a photo before i reflowed
+but here is a photo post reflow of me trying to cool the board!!
+
+<img width="4000" height="3000" alt="20260709_221442" src="https://github.com/user-attachments/assets/e88773d8-fce7-4ce7-90a8-3fdd47d8f32c" />
+
+
+
+once your usb wires start looking like this, you know the project is going to get more intersting.
+
+<img width="3000" height="4000" alt="20260709_225045" src="https://github.com/user-attachments/assets/54abdd5f-a958-45a5-aa3c-dc7b9a29dab3" />
+
+
+so it turned out that i picked the wrong type of USB-C connector footprint in KiCad, which made for an interesting discovery when trying to solder on the USB C port...
+
+
+# 10/07/2026 USB + trying to get power on the 3v3 rail - 7 hours
+
+I finished bodging the USB thing, so that should be sorted, not great, but okay.
+
+<img width="3000" height="4000" alt="20260710_235956" src="https://github.com/user-attachments/assets/e424558a-13df-4269-a583-bd0a73e7c839" />
+
+
+have been trying to identify why im not getting 3.3v
+<img width="4000" height="3000" alt="image" src="https://github.com/user-attachments/assets/bbae894e-03ed-462e-8ae5-1fe9cf39dbe2" />
+<img width="4000" height="3000" alt="image" src="https://github.com/user-attachments/assets/9b20e843-572d-44c5-93d8-c8da9461d6f5" />
+
+photos of the area don't make it look awful 
+
+ive got a janky thing instead of the jumper, i dont want to solder the through hole pins for the selection source for the 3.3v reg, as otherwise i wont get as good contact with the hotplate when reflowing, so ive done this
+<img width="4000" height="3000" alt="image" src="https://github.com/user-attachments/assets/dec2e26b-9075-4a0b-994a-5a0939c4c0d4" />
+
+i still need to remove it, but its not as hard
+
+5v looks clean ish, but im not sure whats causing that nose
+
+<img width="4000" height="3000" alt="20260710_172340" src="https://github.com/user-attachments/assets/e4eb86c6-7f46-4dc8-90a7-9b17020cf0f2" />
+
+
+
+and then my 3.3v rail is looking like this
+
+<img width="4000" height="3000" alt="20260710_172649" src="https://github.com/user-attachments/assets/cee046bd-00dc-4ea2-8bae-e310e9d83a17" />
+
+
+its supposed to be operating at around 2.2MHz so i dont expect anything spicy at this scale, but given im at 1.12V im guessing ive either got a mistake on my resitsors, or the freq selection stuff.
+
+<img width="4000" height="3000" alt="20260710_173040" src="https://github.com/user-attachments/assets/96e05ac8-a17a-4597-a6d4-910966537d84" />
+
+and now im just getting noise
+
+noise that keeps changing
+<img width="4000" height="3000" alt="20260710_173043" src="https://github.com/user-attachments/assets/ec028aa8-9686-4f9a-8f88-7ad799d4c3b7" />
+
+anddd i worked out i left a pin floating that should have been grounded...
+
+<img width="3000" height="4000" alt="20260710_180816" src="https://github.com/user-attachments/assets/d6ce3887-0aa1-4249-88c3-3978bdef1798" />
+
+
+so now that's bodged with a wire under it that i can join to gnd somewhere
+
+so much time spent trying to work out exactly whats gone wrong :sob: 
+
+# 11/07/2026 more trying to fix the 3.3V regulator - 6 hours
+
+I've really been having an experience trying to fix the 3.3V reg, I think the long wire i tried to use before was too long and acting as an atenna at those frequencies or just something was wrong.
+Soooo here are my various attempts including
+- shorter wire
+- shorter wire again
+- scrapping of coppuer under the footprint to try and get a bridge between the pin and the copper
+- another attempt at that
+- even more attempts at that
+<img width="1290" height="860" alt="_DSC5476" src="https://github.com/user-attachments/assets/3b70903b-a93d-4860-80ac-c29cbc3af9c1" />
+<img width="1379" height="919" alt="_DSC5472" src="https://github.com/user-attachments/assets/af41a1cd-00a5-4e6e-b12a-d202767b90bf" />
+<img width="1628" height="1085" alt="_DSC5475" src="https://github.com/user-attachments/assets/38e9c3bb-97f3-4805-87ed-6912d35411cc" />
+<img width="837" height="558" alt="_DSC5468" src="https://github.com/user-attachments/assets/af577ef0-431d-4174-a26b-84af2bc71d58" />
+<img width="1510" height="1007" alt="_DSC5465" src="https://github.com/user-attachments/assets/894cd194-c236-49b2-b560-f9a776bfb470" />
+<img width="1006" height="671" alt="_DSC5449" src="https://github.com/user-attachments/assets/03b917dc-ba52-40f6-9c82-068cde831681" />
+
+the 3.3V reg still doesn't work...
+
+# 22/09/2026 soldering up another board - 3 hours 
+
+Given how much reflowing I did on the original almost fully populated PCB, I thought to give myself the best chance of not just having random dead ICs, I should assemble a board where Ipopulate near the minimum components to test if it works properly.
+
+<img width="2048" height="1366" alt="_DSC6055" src="https://github.com/user-attachments/assets/bc7f1999-0002-44e2-b09a-a73c0a1af459" />
+
+<img width="2048" height="1366" alt="image" src="https://github.com/user-attachments/assets/bf14c7e4-a199-4035-9821-15ee504cd9c7" />
+
+
+
+# 23/09/2026  placing the last parts onto the 2nd board and reflowing - 3 hours
+
+i finally got all the parts onto the second board and reflowed all of it. Annoyingly since i waited so long the flux in the past dried out making the sticking of components down to the PCB much harder.
+
+<img width="3000" height="4000" alt="20260924_233933" src="https://github.com/user-attachments/assets/9ca32be3-0d23-45df-80dc-76a9ff2d4607" />
+
+its not as clean as the other
+<img width="3000" height="4000" alt="20260926_023415" src="https://github.com/user-attachments/assets/7fe41706-808f-4ab9-8f50-25106d6f8900" />
+
+
+but took less time to get populated as I skipped a bunch of stuff, and stuff that was harder to solder like the big inductors that sucked to get soldered.
+# 24/09/2026 stm32 shaped 2.5W heater - 8 hours
+
+today has been full of "experiences" when trying to get the PCB working
+
+first thing i did that messed me up was soldering on a terminal 90degrees out of alignment...
+
+Getting them to solder down was INCREDIBLY difficult , and getting one out was even harder,
+When you have tons of vias, massive uninterrupted power planes, and extra thermal mass and conductivity from having of 2oz external copper, and 1oz internal copper , it make the experience even more "fun". I think it took a good 4min of dual wielding a hot air gun and a soldering iron to get it out. And "getting it out" meant getting it to drop around 2mm, so i could use side cutter to get it out because it did NOT want to come out.
+
+
+here is a photo of the poor state that PCB was in :(
+<img width="3000" height="4000" alt="20260924_214917" src="https://github.com/user-attachments/assets/18c057a3-2484-4b5e-b291-fdaab0e793b9" />
+<img width="3000" height="4000" alt="20260924_215209" src="https://github.com/user-attachments/assets/097baad9-e10d-4ea5-8ebe-7cbbfb1a71b5" />
+
+
+But in the end i got it out!!!
+
+here is a photo of how the PCB looks now
+
+<img width="3000" height="4000" alt="20260924_220310 2" src="https://github.com/user-attachments/assets/bb00bd47-c8da-4def-afb7-f102c8366f22" />
+
+which got me back to having a populated PCB!!
+
+
+#### This is the part of todays journal where I explain the title being "stm32 shaped 2.5W heater"
+
+So at this point I have
+- a virtually fully populated PCB with a potentially heat damaged STM32
+- a functionally populated board that shouldn't have any heat damaged components
+
+So I get some things together
+<img width="4000" height="3000" alt="20260924_230330" src="https://github.com/user-attachments/assets/04783589-306c-4a73-949a-924ca0beed3a" />
+
+- multi meter because the owon P4305 has an amperage accuracy of arround +-10ma, if a healthy STM32 pulls 5-10mA, and a dead one pulls 0mA, then i cant tell the difference without the multimeter
+- modern linear PSU that i trust to actually output the right voltage
+	- using this for the 3.3V since ive had so many issues with it and its killed so much of my time
+- 2nd PSU to do the 12-24V input
+
+
+I hook everything up as you'd expect to the semi populated board as i thought id have a better chance getting something out of that one. I turn on the 3.3V psu and instantly hit the overcurrent protection, what on earth is pulling 1.5A of 3.3V?
+
+So I grab a multimeter and measure the resistance between GND and the 3.3V rail, ~1Ohm, not normal
+
+some extra attentive checking for shorted pads on the stm32 later and nothing looks wrong, but ive touched some pads up 
+<img width="3190" height="1859" alt="_DSC6074" src="https://github.com/user-attachments/assets/0f51a042-9666-4646-9458-7751781a7e20" />
+<img width="3381" height="1838" alt="_DSC6077" src="https://github.com/user-attachments/assets/b387ef94-4400-4713-9b1c-4b338e88a6b8" />
+<img width="3511" height="2712" alt="_DSC6076" src="https://github.com/user-attachments/assets/beac310e-e988-474b-826c-60936b2bf0f7" />
+<img width="3069" height="1898" alt="_DSC6075" src="https://github.com/user-attachments/assets/0e72c598-495e-4780-b926-c3cb0e3a649c" />
+
+Try 2 , ***beeeep***, overcurrent protection again...
+but nothing is catching fire, nothing is going bang etc, so given its a semi populated PCB, i thought id turn the overcurrent protection off, and just run up the current limit until i could feel a component getting warm. 
+
+100mA, nothing,
+200mA nothing, 
+1.5A limit, YUP THE STM32 IS GETTING WARM FAST
+
+The heat was coming from the package so i presume id probably managed to damage it with heat.
+
+It being the fault of the STM32 was confirmed when i desoldered it an my GND-3.3V resistance dropped to 5.6kOhms
+
+a replacement STM32 got that current down from 1.5A to ~7mA, which makes sense 
+
+<img width="4000" height="3000" alt="Pasted image 20260926011845" src="https://github.com/user-attachments/assets/c1f0e498-71ab-4569-8975-e2cd428588a3" />
+
+
+
+The board I thought would have issues only pulled ~5mA also in the healthy range, so hopefully i should have two boards that just need a flash then should work!
+
+
+# 25/09/2026 actually getting it working and getting a demo video - 3 hours
+
+well this makes for some fun trouble shooting
+<img width="932" height="70" alt="image" src="https://github.com/user-attachments/assets/c0166983-2247-4dba-8959-a7cac7dfa000" />
+
+Pulls the right amount of power as if its a working stm32, but doesn't want to talk to me
+<img width="4000" height="3000" alt="20260925_022702" src="https://github.com/user-attachments/assets/b8b67d68-b0a3-45a6-a254-06e42e4d4436" />
+
+
+Also a fun time to realize that breaking out the SWD pins is normally something that people do to help with troubleshooting.
+
+its also certainly a setup im working with
+<img width="4000" height="3000" alt="20260925_215227" src="https://github.com/user-attachments/assets/98320a24-08eb-495d-846c-b8c9e541114c" />
+
+So now i could have any of the following issues:
+- issue with my pcb design (unlikely)
+- issue with my USB cable "solution" (likely)
+- issue with my power supply (unlikely)
+- something else ??
+
+Anddddd its communicating!!!
+
+it fell into the  "issue with my pcb design", not as unlikely as I thought
+Boot0 was properly set up with a pull down resistor and a switch to pull it up
+But Boot1 was left floating, it should have been pulled down...
+It was NOT broken out
+soldering on the STM32s legs is trickyyyyy...
+
+
+<img width="844" height="560" alt="image" src="https://github.com/user-attachments/assets/e4db79e0-b427-4123-9311-09857f1e6876" />
+
+fan go spinny spinny  
+*insert happy William noises*
+
+
+
+# lessons ive learnt from this
+- DOUBLE CHECK YOUR FOOTPRINTS
+- THERMAL RELIFS ARE IMPORTANT TO MAKE THINGS SOLDERABLE WHEN YOUR PCB HAS 2OZ COPPER
+- add holes so I can use a stand to hold the PCB
+- make sure to break out the SWD pins an STM32, makes debugging easier
+- be suspicious of stuff that is left floating in your schematic
